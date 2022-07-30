@@ -1,0 +1,5 @@
+{
+  "extends": "@codecb/tsconfigs/tsconfig.node-app-legacy",
+  "compilerOptions": { "outDir": "dist" },
+  "include": ["src"]
+}
