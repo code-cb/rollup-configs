@@ -1,25 +1,32 @@
 {
   "name": "@codecb/rollup-config-test-web",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "files": [
     "dist"
   ],
   "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./fullstack": "./dist/fullstack.js"
+  },
   "scripts": {
     "build": "rm -rf dist && tsc",
     "format": "prettier --write '**/*.ts'"
   },
   "dependencies": {
+    "@rollup/plugin-commonjs": "^23.0",
+    "@rollup/plugin-node-resolve": "^15.0",
+    "@rollup/plugin-replace": "^5.0",
     "@web/rollup-plugin-copy": "0.3.0",
-    "fast-glob": "3.2.12",
-    "rollup": "3.2.3",
-    "rollup-plugin-ts": "3.0.2"
+    "fast-glob": "^3.2",
+    "rollup": "^3.5",
+    "rollup-plugin-ts": "^3.0"
   },
   "devDependencies": {
     "@codecb/prettierrc": "0.0.1",
     "@codecb/tsconfigs": "0.0.10",
-    "typescript": "4.8.4"
+    "typescript": "^4.9"
   },
   "prettier": "@codecb/prettierrc"
 }
